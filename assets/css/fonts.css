@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'PNT';
+	src: url('../fonts/Proxima-Nova-Thin.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Thin.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNR';
+	src: url('../fonts/Proxima-Nova-Regular.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNB';
+	src: url('../fonts/Proxima-Nova-Bold.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNE';
+	src: url('../fonts/Proxima-Nova-Extrabold.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Extrabold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNBl';
+	src: url('../fonts/Proxima-Nova-Black.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Black.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNAT';
+	src: url('../fonts/Proxima-Nova-Alt-Thin.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Alt-Thin.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNAL';
+	src: url('../fonts/Proxima-Nova-Alt-Light.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Alt-Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PNAB';
+	src: url('../fonts/Proxima-Nova-Alt-Bold.otf');
+	src: url(//:) format ('no404'), url('../fonts/Proxima-Nova-Alt-Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'ChivoLight';
+	src: url('../fonts/Chivo-Light.ttf');
+	src: url(//:) format ('no404'), url('../fonts/Chivo-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ChivoReg';
+	src: url('../fonts/Chivo-Regular.ttf');
+	src: url(//:) format ('no404'), url('../fonts/Chivo-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ChivoBold';
+	src: url('../fonts/Chivo-Bold.ttf');
+	src: url(//:) format ('no404'), url('../fonts/Chivo-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
