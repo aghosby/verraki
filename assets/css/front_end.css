@@ -845,7 +845,7 @@ html {
 }
 .section .inner-wrap .col_inner .p_hld {
 	width: 28%;
-	height: 380px;
+	height: 60vh;
 	position: relative;
 	background-color: #000;
 	float: left;
