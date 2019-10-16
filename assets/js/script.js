@@ -60,6 +60,13 @@ $(document).ready(function() {
 		$(this).find(".sp-1").toggleClass('sh');
         $(this).find(".sp-2").toggleClass('sh');
 	});
+	$("body").delegate(".ic", "click", function (e) {
+		e.stopPropagation();
+		var c = $(this).parents(".car_wrap"),
+			m = c.find('.car_det');
+		$(".car_wrap .car_det").not(m).slideUp();
+		m.slideToggle();
+	});
 	
 });
 
