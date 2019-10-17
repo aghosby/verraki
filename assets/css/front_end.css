@@ -720,7 +720,7 @@ html {
 	left: 0;
 }
 .major_cap {
-	width: 85%;
+	width: 75%;
 	margin-bottom: 10px;
 	letter-spacing: 0.8px;
 	font-family: "PNAL";
@@ -739,7 +739,7 @@ html {
 	padding-left: 50px;
 }
 .s_line {
-	width: 68%;
+	width: 85%;
 }
 .det_text p {
 	line-height: 1.5;
