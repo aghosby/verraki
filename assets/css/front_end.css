@@ -1429,7 +1429,14 @@ html {
 .car_hld .car_wrap .car_det p:nth-child(n+2) {
 	margin-top: 10px;
 }
-
+.row-t .col_photo {
+	width: 60%;
+	margin-top: 30px; 
+}
+.row-t .col_photo img {
+	width: 100%;
+	height: auto; 
+}
 
 
 
