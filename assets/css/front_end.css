@@ -553,7 +553,7 @@ html {
 /* TEMPLATE HEADER AND FOOTER */
 .pg_banner {
 	width: 100%;
-	height: 40vh;
+	height: 30vh;
 	position: relative;
 	background-size: cover;
 	background-color: #363639;
