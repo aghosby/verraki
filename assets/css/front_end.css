@@ -1439,6 +1439,152 @@ html {
 	height: auto;
 }
 
+/* CONTACT US PAGE */
+.cont_wrap {
+	width: 40%;
+	padding: 40px 35px;
+	background-color: #fafafa;
+	display: inline-block;
+	vertical-align: top;
+}
+.cont_wrap .cont_hld:nth-child(n+2) {
+	margin-top: 25px;
+}
+.cont_wrap .cont_hld .cont_title {
+	margin-bottom: 5px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-family: "PNB";
+	font-size: 16px;
+	color: #5a5b5c;
+}
+.cont_wrap .cont_hld:first-child .cont_det p {
+	line-height: 1.4;
+}
+.cont_wrap .cont_hld .cont_det p {
+	letter-spacing: 0.7px;
+	font-family: "PNAL";
+	font-size: 15px;
+	color: #5a5b5c;
+}
+.cont_wrap .cont_hld .cont_det p:nth-child(n+2) {
+	margin-top: 4px;
+	
+}
+form {
+	width: 52%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 7%;
+}
+.in_row {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.in_row:nth-child(n+2) {
+	margin-top: 13px;
+}
+.in_row .tgroup {
+	float: left;
+	position: relative;
+}
+.in_row .tgroup {
+	width: 48.5%;
+}
+.in_row:nth-child(3) .tgroup {
+	width: 100%;
+}
+.in_row .tgroup:nth-child(2) {
+	margin-left: 3%;
+}
+label {
+	display: block;
+	color: #5a5b5c;
+	font-size: 13px;
+	font-family: 'PNAL';
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+input {
+	width: 100%;
+	transition: all 0.7s ease;
+	background-color: #fff;
+    border: 1px solid #f6f4f2;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+input:focus {
+	outline: none;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #f6f4f2;
+    background-color: #fff;
+}
+textarea:focus {
+	outline: none;
+}
+::placeholder {
+	font-size: 13px;
+	font-family: 'PNAL';
+	letter-spacing: 0.6px;
+	color: #EAEAEA;
+}
+.edge-cta {
+	width: auto;
+	border: none;
+    background-color: transparent;
+    outline: none;
+	margin-top: 20px;
+	transition: all 0.7s ease;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: none;
+	line-height: 1.3;
+	transition: all 1s cubic-bezier(0.4,0,0.2,1);
+	letter-spacing: 1.4px;
+	font-family: "PNB";
+	font-size: 13px;
+	color: #f58634;
+}
+.edge-cta:hover {
+	cursor: pointer;
+}
+.edge-cta:before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #ddd;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+}
+.edge-cta:after {
+	content: "";
+	width: 0;
+	height: 1px;
+	transition: all 1s cubic-bezier(0.4,0,0.2,1);
+	background-color: #f58634;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+}
+.edge-cta:hover:after {
+	width: 100%;
+}
+#map {
+	height: 450px;
+	margin-top: 80px;
+	border: 1px solid #f6f4f2;
+}
 
 /* DETAILS PAGE */
 .section-l .inner-wrap .b-crumbs {
