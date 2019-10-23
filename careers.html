@@ -13,6 +13,36 @@
 <script type="text/javascript" src="./assets/js/prefixfree-1.0.7.js"></script>
 <script type="text/javascript" src="./assets/js/script.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+	$('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	  
+	  if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top-130
+        }, 3000);
+		
+		  return false;
+        }
+      }
+    });
+	
+	
+});
+</script>
+
 </head>
 
 <body>
@@ -28,7 +58,7 @@
         </div>
           
         <div class="menu_icon">
-<!--            <div class="menu_text">Menu</div>   -->
+          <div class="menu_text">Menu</div>   
           <div class="b_icon"> 
             <span class="b_top"></span> 
             <span class="b_mid"></span> 
@@ -39,17 +69,19 @@
       </div> 
     </div>
     
-    <div class="menu">
+      <div class="menu">
         
         <div class="header">
           <div class="hdr clearfix">
           
             <div class="brandname"> 
-              <a href="./"><img src="assets/img/verraki_logo.png" /></a>
+              <a href="./">
+                <img src="assets/img/verraki_logo.png" />
+              </a>
             </div>
           
             <div class="menu_icon">
-<!--            <div class="menu_text">Menu</div>   -->
+              <div class="menu_text">Menu</div>   
               <div class="b_icon"> 
                 <span class="b_top"></span> 
                 <span class="b_mid"></span> 
@@ -59,7 +91,6 @@
         
           </div> 
         </div>
-        
         <div class="menu_wrap">
         
           <div class="menu_left_col">
@@ -69,20 +100,20 @@
             <div class="link_wrap">
               <div class="link_title"><a href="about.html">About Us</a></div>
               <ul class="sublinks">
-                <li><a href="about.html/#company">Our Company</a></li>
-                <li><a href="about.html/#value">Value Proposition</a></li>
-                <li><a href="about.html/#team">Our Team</a></li>
-                <li><a href="about.html/#advisors">Advisors</a></li>
-                <li><a href="about.html/#csr">Community Programmes</a></li>
-                <li><a href="about.html/#faq">FAQs</a></li>
+                <li><a href="about.html#company">Our Company</a></li>
+                <li><a href="about.html#value">Value Proposition</a></li>
+                <li><a href="about.html#team">Our Team</a></li>
+                <li><a href="about.html#advisors">Advisors</a></li>
+                <li><a href="about.html#csr">Community Programmes</a></li>
+                <li><a href="about.html#faq">FAQs</a></li>
               </ul>
             </div>
             <div class="link_wrap">
               <div class="link_title"><a href="solutions.html">Our Solutions</a></div>
               <ul class="sublinks">
-                <li><a href="">Technology</a></li>
-                <li><a href="">Advisory</a></li>
-                <li><a href="">Ventures</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="ventures.html">Ventures</a></li>
               </ul>
             </div>
             
@@ -92,9 +123,9 @@
             <div class="link_wrap">
               <div class="link_title"><a href="industries.html">Industries</a></div>
               <ul class="sublinks">
-                <li><a href="">Real Sector</a></li>
-                <li><a href="">Social Sector</a></li>
-                <li><a href="">Services Sector</a></li>
+                <li><a href="industrie.html#serv_sec">Services Sector</a></li>
+                <li><a href="industries.html#real_sec">Real Sector</a></li>
+                <li><a href="industries.html#soc_sec">Social Sector</a></li>
               </ul>
             </div>
             <div class="link_wrap">
@@ -103,9 +134,9 @@
             <div class="link_wrap">
               <div class="link_title"><a href="newsroom.html">Newsroom</a></div>
               <ul class="sublinks">
-                <li><a href="">Blog</a></li>
-                <li><a href="">Media</a></li>
-                <li><a href="">Insights</a></li>
+                <li><a href="newsroom.html">Blog</a></li>
+                <li><a href="newsroom.html">Media</a></li>
+                <li><a href="newsroom.html">Insights</a></li>
               </ul>
             </div>
             <div class="link_wrap">
@@ -121,32 +152,26 @@
         <div class="menu_ft">
           <div class="cont_info_ft">
             <div class="info_col">
-              <a href="">info@verraki.com</a>
+              <a href="mailto: info@verraki.com">info@verraki.com</a>
             </div>
+            <div class="info_col">27 Kofo Abayomi Street, Victoria Island, Lagos, Nigeria</div>
             <div class="info_col">
-              <a href="">27 Kofo Abayomi Street, Victoria Island, Lagos, Nigeria</a>
-            </div>
-            <div class="info_col">
-              <a href="">+234-(1)-453-7151</a>
+              <a href="tel:+234-(1)-453-7151">+234-(1)-453-7151</a>
             </div>
           </div>
           <div class="social">
-            <a href="https://linkedin.com/" class="fab fa-linkedin-in"></a>
-            <a href="https://facebook.com/" class="fab fa-facebook-f"></a>
-            <a href="https://twitter.com/" class="fab fa-twitter"></a>
-            <a href="https://youtube.com/" class="fab fa-youtube"></a>
-            <a href="https://instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://linkedin.com/company/35563551/"  target="new" class="fab fa-linkedin-in"></a>
+            <a href="https://facebook.com/VerrakiPartners-763370147381957" target="new" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/verrakip" target="new" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCdqoCzGhYBpu92G_4IhbQsg" target="new" class="fab fa-youtube"></a>
+            <a href="https://instagram.com/verraki_partners/" target="new" class="fab fa-instagram"></a>
           </div>
         </div>
-        
-        </div>
-        
-       
                    
       </div>
     
     <div class="content">
-    <div class="pg_banner" style="background-image: url(media/building.jpeg)">
+    <div class="pg_banner" style="background-image: url(media/building.jpg)">
       <div class="overlay"></div>
     </div>
     
@@ -159,43 +184,32 @@
           
           <div class="news_sort">
             <ul class="clearfix">
-              <li>Our People</li>
-              <li>Why Verraki</li>
-              <li>Professionals</li>
-              <li>Students & Young Professionals</li>
-              <li>Apply Now</li>
+              <li><a href="careers.html#people">Our People</a></li>
+              <li><a href="careers.html#verraki">Why Verraki</a></li>
+              <li><a href="careers.html#professionals">Professionals</a></li>
+              <li><a href="careers.html#students">Students & Graduates</a></li>
+              <li><a href="careers.html#apply">Apply Now</a></li>
             </ul>
           </div>
           
           <div class="row-t">
-            <div class="sec_cap">Our People</div>
-            <div class="major_cap">We are a company taking bold steps to create a new narrative for Africa.</div>
+            <div class="sec_cap" id="people">Our People</div>
+            <div class="major_cap">Build your African future at Verraki.</div>
             <div class="det_text s_line">
-              <p>Verraki Partners (Verraki) is a business solutions company for Africa. We believe that business solutions specifically fit for purpose are necessary to solve for Africa and deliver inclusive high-quality growth for the continent’s enterprises and governments.</p>
-              <p>We promote a strong, collaborative culture and provide our employees with the tools and skills they need to succeed.</p>
-              <p>We offer a flexible work environment to support the balance in your life and keep you performing at your best.</p>
+              <p>If you are a boundary pusher; an exceptional person who does not confirm to the present but visualizes an Africa that is better than now, you are welcome here. We look for people with standout capabilities to build future solutions.</p>
+              <p>Join our team in Lagos, Nigeria to be the transformation partner of choice for governments and enterprises seeking to create a better future.</p>
             </div>
             
             <div class="col_photo">
               <img src="media/careers.png" />
-             </div>
+            </div>
              
              <div class="col_inner">
-               <div class="sec_cap">Why Verraki</div>
+               <div class="sec_cap" id="verraki">Why Verraki</div>
                <div class="major_cap">Bespoke solutions for Africa.</div>
                <div class="det_text s_line">
-                 <p>Verraki Partners (Verraki) is a business solutions company for Africa. We believe that business solutions specifically fit for purpose are necessary to solve for Africa and deliver inclusive high-quality growth for the continent’s enterprises and governments.</p>
-                 <p>We work with enterprises and governments to ignite opportunities and achieve the seemingly impossible.</p>
-                 <div class="sub_h">Our formula for success includes:</div>
-                 <ul class="clearfix">
-                   <li>Fit-for-purpose for Africa</li>
-                   <li>Innovative solutions to release unrealised potential</li>
-                   <li>Results and Outcomes</li>
-                   <li>Client-centered thinking</li>
-                   <li>Strategic Outlook</li>
-                   <li>Partnership Orientation</li>
-                   <li>Solve for People</li>
-                 </ul>
+                 <p>At Verraki, we envision a transformed Africa that is an improved place to live and work. We see a new narrative for Africa, as a continent with the brightest talent and biggest opportunities and we are prepared, sleeves up, to make that happen.</p>
+                 <p>At Verraki, we envision a transformed Africa that is an improved place to live and work. We see a new narrative for Africa, as a continent with the brightest talent and biggest opportunities and we are prepared, sleeves up, to make that happen.</p>
                </div>
              </div>
           
@@ -206,13 +220,40 @@
       
       <div class="pop_row"> 
         <div class="png_photo">
+          <img src="media/mike.png" />
+        </div>
+        <div class="q_wrap">
+          <div class="q_det">
+            <i class="fa fa-quote-right" aria-hidden="true"></i>
+            <div class="q_text">
+              <div class="q_cap">“I love the flexibility that comes with working at Verraki. Remote working is encouraged here as far as deliverables are met. This gives me a decent work life balance. From senior management to junior staff; you are encouraged to share your opinions and be active."</div>
+              <div class="q_author">Samson Adebola</div>
+             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section grey_sec sec_bot">
+        <div class="inner-wrap">
+          <div class="sec_cap" id="professionals">Professionals</div>
+          <div class="major_cap">What we do is more than a job, it’s inspired work.</div>
+          <div class="det_text">
+            <p>Do your best work. If you are interested in driving transformational impact. If you want to do what you love best, while helping African enterprises and governments inch the needle towards sustainability and development. And if you want to develop your career in a fast-paced and innovative learning environment. You should start here.</p>
+            <p>We promote a strong and collaborative culture, investing in our employees and communities while supporting our veterans and promoting diversity.</p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="pop_row grey_sec"> 
+        <div class="png_photo">
           <img src="media/aghogho2.png" />
         </div>
         <div class="q_wrap">
           <div class="q_det">
             <i class="fa fa-quote-right" aria-hidden="true"></i>
             <div class="q_text">
-              <div class="q_cap">“We add value to your life by managing behavioural biases and guiding you towards making the most appropriate and most rational investment decisions."</div>
+              <div class="q_cap">“It is exciting to work with some of the best minds in Africa with experience managing large enterprises and projects across the continent. There is so much work to do transforming the continent and I am happy to be right at the centre of it."</div>
               <div class="q_author">Etibo Aghogho</div>
              </div>
           </div>
@@ -221,12 +262,17 @@
       
       <div class="section grey_sec">
         <div class="inner-wrap">
-          <div class="sec_cap">Professionals</div>
-          <div class="major_cap">What we do here is more than a job, it’s inspired work.</div>
+          <div class="sec_cap" id="students">Students & Graduates</div>
+          <div class="major_cap">Advance your skills with us. </div>
           <div class="det_text">
-            <p>Verraki Partners (Verraki) is a business solutions company for Africa. We believe that business solutions specifically fit for purpose are necessary to solve for Africa and deliver inclusive high-quality growth for the continent’s enterprises and governments.</p>
-            <p>We promote a strong, collaborative culture and provide our employees with the tools and skills they need to succeed.</p>
-            <p>Investing in our employees and communities, supporting our veterans, and promoting diversity and inclusion are critical components to how we do business.</p>
+            <p>Africa needs builders and innovators; inspired people who plan to leave the world better than they meet it. Whether you are finishing your undergraduate degree or studying at the postgraduate level, a career at Verraki is the best way to put your talents and knowledge to work for the continent.</p>
+            <p>Start your career with any of our tracks below:</p>
+            <ul>
+              <li>Internship</li>
+              <li>NYSC</li>
+              <li>Verraki Associate</li>
+              <li>Technology Solutions Engineering Programme</li>
+            </ul>
           </div>
           
         </div>
@@ -234,10 +280,11 @@
       
       <div class="section">
         <div class="inner-wrap">
-          <div class="sec_cap">Available Positions</div>
+          <div class="sec_cap" id="apply">Available Positions</div>
           <div class="major_cap">Find the job that inspires you.</div>
+          
           <div class="car_hld">
-              
+          
             <div class="car_wrap">
               <div class="ic">
                 <div class="car_title">Digital Marketing</div>
@@ -246,7 +293,8 @@
               </div>
               <div class="car_det">
                 <div class="car_text">
-                  <div class="sub_h">What we are looking for</h1>
+                  <div class="car_date">8th October, 2019</div> 
+                  <div class="sub_h">What we are looking for</div>
                   <ul class="clearfix">
                     <li>Undergraduate/Master’s Degree in Computer Engineering, Electrotechnical Engineering or similar</li>
                     <li>Minimum of 2 years of work experience on the Salesforce platform</li>
@@ -256,9 +304,14 @@
                     <li>Excellent communication skills</li>
                     <li>Mastery of English</li>
                   </ul>
-                  <p>Professional Services firms in Nigeria are currently at an inflexion point. Digital technologies, new ideas and business models create disruptions, while startups compound the challenging business terrain. New factors such as agility, flexibility, cost-leadership, value for money and entrepreneurship are required for success and to harvest the opportunities from this disruption.</p>
-                  <p>Challenges to Accenture operations in Nigeria include FX Restrictions, National Contents regulations, NOTAP mandate for increased local operations, various geopolitical situations and a weakening of the economy.</p>
-                  </div>
+                  <div class="sub_h">What we offer</div>
+                  <ul class="clearfix">
+                    <li>Integration in a company that aims to be a breath of fresh air in the market;</li>
+                    <li>Minimum of 2 years of work experience on the Salesforce platform</li>
+                    <li>The possibility of being part of a team that wants to help you evolve and transform your world;</li>
+                    <li>Participation in motivating, diversified national and international projects;</li>
+                    <li>Appealing conditions, appropriate to the level of experience.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -271,8 +324,25 @@
               </div>
               <div class="car_det">
                 <div class="car_text">
-                  <p>Professional Services firms in Nigeria are currently at an inflexion point. Digital technologies, new ideas and business models create disruptions, while startups compound the challenging business terrain. New factors such as agility, flexibility, cost-leadership, value for money and entrepreneurship are required for success and to harvest the opportunities from this disruption.</p>
-                  <p>Challenges to Accenture operations in Nigeria include FX Restrictions, National Contents regulations, NOTAP mandate for increased local operations, various geopolitical situations and a weakening of the economy.</p>
+                  <div class="car_date">2nd October, 2019</div> 
+                  <div class="sub_h">What we are looking for</div>
+                  <ul class="clearfix">
+                    <li>Undergraduate/Master’s Degree in Computer Engineering, Electrotechnical Engineering or similar</li>
+                    <li>Minimum of 2 years of work experience on the Salesforce platform</li>
+                    <li>Experience with APEX language</li>
+                    <li>Excellent capacity for analysing and resolving problems</li>
+                    <li>Strategic Outlook</li>
+                    <li>Excellent communication skills</li>
+                    <li>Mastery of English</li>
+                  </ul>
+                  <div class="sub_h">What we offer</div>
+                  <ul class="clearfix">
+                    <li>Integration in a company that aims to be a breath of fresh air in the market;</li>
+                    <li>Minimum of 2 years of work experience on the Salesforce platform</li>
+                    <li>The possibility of being part of a team that wants to help you evolve and transform your world;</li>
+                    <li>Participation in motivating, diversified national and international projects;</li>
+                    <li>Appealing conditions, appropriate to the level of experience.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -285,13 +355,36 @@
               </div>
               <div class="car_det">
                 <div class="car_text">
-                  <p>Professional Services firms in Nigeria are currently at an inflexion point. Digital technologies, new ideas and business models create disruptions, while startups compound the challenging business terrain. New factors such as agility, flexibility, cost-leadership, value for money and entrepreneurship are required for success and to harvest the opportunities from this disruption.</p>
-                  <p>Challenges to Accenture operations in Nigeria include FX Restrictions, National Contents regulations, NOTAP mandate for increased local operations, various geopolitical situations and a weakening of the economy.</p>
+                  <div class="car_date">23rd September, 2019</div> 
+                  <div class="sub_h">What we are looking for</div>
+                  <ul class="clearfix">
+                    <li>Undergraduate/Master’s Degree in Computer Engineering, Electrotechnical Engineering or similar</li>
+                    <li>Minimum of 2 years of work experience on the Salesforce platform</li>
+                    <li>Experience with APEX language</li>
+                    <li>Excellent capacity for analysing and resolving problems</li>
+                    <li>Strategic Outlook</li>
+                    <li>Excellent communication skills</li>
+                    <li>Mastery of English</li>
+                  </ul>
+                  <div class="sub_h">What we offer</div>
+                  <ul class="clearfix">
+                    <li>Integration in a company that aims to be a breath of fresh air in the market;</li>
+                    <li>Minimum of 2 years of work experience on the Salesforce platform</li>
+                    <li>The possibility of being part of a team that wants to help you evolve and transform your world;</li>
+                    <li>Participation in motivating, diversified national and international projects;</li>
+                    <li>Appealing conditions, appropriate to the level of experience.</li>
+                  </ul>
                 </div>
               </div>
             </div>
-              
+          
+          
+          
           </div>
+          
+          
+          
+                         
           
         </div>
       </div>
@@ -325,11 +418,11 @@
             <div class="col-links">
               <div class="col-info">2nd Floor, Citibank Building, <br />27 Kofo Abayomi Street, Victoria Island, <br /> Lagos, Nigeria.</div>
               <div class="col-info clearfix">
-                <p><a href="">+234 (1) 453 7151,</a></p>
-                <p><a href="">0901-VERRAKI</a></p>
+                <p><a href="tel: +234-(1)-453-7151">+234 (1) 453 7151,</a></p>
+                <p><a href="tel: 0901-VERRAKI">0901-VERRAKI</a></p>
               </div>
               <div class="col-info">
-                <p><a href="">info@verraki.com</a></p>
+                <p><a href="mailto: info@verraki.com">info@verraki.com</a></p>
               </div>
               
             </div>
@@ -337,11 +430,11 @@
           <div class="col-3">
             <div class="col-hd">Social</div>
             <div class="col-links">
-              <a href="https://linkedin.com/" class="fab fa-linkedin-in"></a>
-              <a href="https://facebook.com/" class="fab fa-facebook-f"></a>
-              <a href="https://twitter.com/" class="fab fa-twitter"></a>
-              <a href="https://youtube.com/" class="fab fa-youtube"></a>
-              <a href="https://instagram.com/" class="fab fa-instagram"></a>
+              <a href="https://linkedin.com/company/35563551/"  target="new" class="fab fa-linkedin-in"></a>
+              <a href="https://facebook.com/VerrakiPartners-763370147381957" target="new" class="fab fa-facebook-f"></a>
+              <a href="https://twitter.com/verrakip" target="new" class="fab fa-twitter"></a>
+              <a href="https://www.youtube.com/channel/UCdqoCzGhYBpu92G_4IhbQsg" target="new" class="fab fa-youtube"></a>
+              <a href="https://instagram.com/verraki_partners/" target="new" class="fab fa-instagram"></a>
             </div>
 <!--            <div class="v_gram">
               <img src="../assets/img/v_orange.png" />
