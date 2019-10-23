@@ -13,6 +13,38 @@
 <script type="text/javascript" src="./assets/js/prefixfree-1.0.7.js"></script>
 <script type="text/javascript" src="./assets/js/script.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+	$('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	  
+	  if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top-130
+        }, 3000);
+		
+		  return false;
+        }
+      }
+    });
+	
+	
+});
+</script>
+
+
+
 </head>
 
 <body>
@@ -28,7 +60,7 @@
         </div>
           
         <div class="menu_icon">
-<!--            <div class="menu_text">Menu</div>   -->
+          <div class="menu_text">Menu</div>   
           <div class="b_icon"> 
             <span class="b_top"></span> 
             <span class="b_mid"></span> 
@@ -39,17 +71,19 @@
       </div> 
     </div>
     
-    <div class="menu">
+      <div class="menu">
         
         <div class="header">
           <div class="hdr clearfix">
           
             <div class="brandname"> 
-              <a href="./"><img src="assets/img/verraki_logo.png" /></a>
+              <a href="./">
+                <img src="assets/img/verraki_logo.png" />
+              </a>
             </div>
           
             <div class="menu_icon">
-<!--            <div class="menu_text">Menu</div>   -->
+              <div class="menu_text">Menu</div>   
               <div class="b_icon"> 
                 <span class="b_top"></span> 
                 <span class="b_mid"></span> 
@@ -59,7 +93,6 @@
         
           </div> 
         </div>
-        
         <div class="menu_wrap">
         
           <div class="menu_left_col">
@@ -70,19 +103,19 @@
               <div class="link_title"><a href="about.html">About Us</a></div>
               <ul class="sublinks">
                 <li><a href="about.html#company">Our Company</a></li>
-                <li><a href="about.html/#value">Value Proposition</a></li>
-                <li><a href="about.html/#team">Our Team</a></li>
-                <li><a href="about.html/#advisors">Advisors</a></li>
-                <li><a href="about.html/#csr">Community Programmes</a></li>
-                <li><a href="about.html/#faq">FAQs</a></li>
+                <li><a href="about.html#value">Value Proposition</a></li>
+                <li><a href="about.html#team">Our Team</a></li>
+                <li><a href="about.html#advisors">Advisors</a></li>
+                <li><a href="about.html#csr">Community Programmes</a></li>
+                <li><a href="about.html#faq">FAQs</a></li>
               </ul>
             </div>
             <div class="link_wrap">
               <div class="link_title"><a href="solutions.html">Our Solutions</a></div>
               <ul class="sublinks">
-                <li><a href="">Technology</a></li>
-                <li><a href="">Advisory</a></li>
-                <li><a href="">Ventures</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="ventures.html">Ventures</a></li>
               </ul>
             </div>
             
@@ -92,9 +125,9 @@
             <div class="link_wrap">
               <div class="link_title"><a href="industries.html">Industries</a></div>
               <ul class="sublinks">
-                <li><a href="">Real Sector</a></li>
-                <li><a href="">Social Sector</a></li>
-                <li><a href="">Services Sector</a></li>
+                <li><a href="industrie.html#serv_sec">Services Sector</a></li>
+                <li><a href="industries.html#real_sec">Real Sector</a></li>
+                <li><a href="industries.html#soc_sec">Social Sector</a></li>
               </ul>
             </div>
             <div class="link_wrap">
@@ -103,9 +136,9 @@
             <div class="link_wrap">
               <div class="link_title"><a href="newsroom.html">Newsroom</a></div>
               <ul class="sublinks">
-                <li><a href="">Blog</a></li>
-                <li><a href="">Media</a></li>
-                <li><a href="">Insights</a></li>
+                <li><a href="newsroom.html">Blog</a></li>
+                <li><a href="newsroom.html">Media</a></li>
+                <li><a href="newsroom.html">Insights</a></li>
               </ul>
             </div>
             <div class="link_wrap">
@@ -121,49 +154,27 @@
         <div class="menu_ft">
           <div class="cont_info_ft">
             <div class="info_col">
-              <a href="">info@verraki.com</a>
+              <a href="mailto: info@verraki.com">info@verraki.com</a>
             </div>
+            <div class="info_col">27 Kofo Abayomi Street, Victoria Island, Lagos, Nigeria</div>
             <div class="info_col">
-              <a href="">27 Kofo Abayomi Street, Victoria Island, Lagos, Nigeria</a>
-            </div>
-            <div class="info_col">
-              <a href="">+234-(1)-453-7151</a>
+              <a href="tel:+234-(1)-453-7151">+234-(1)-453-7151</a>
             </div>
           </div>
           <div class="social">
-            <a href="https://linkedin.com/" class="fab fa-linkedin-in"></a>
-            <a href="https://facebook.com/" class="fab fa-facebook-f"></a>
-            <a href="https://twitter.com/" class="fab fa-twitter"></a>
-            <a href="https://youtube.com/" class="fab fa-youtube"></a>
-            <a href="https://instagram.com/" class="fab fa-instagram"></a>
-          </div>
-        </div>
-        
-        <div class="menu_ft">
-          <div class="cont_info_ft">
-            <div class="info_col">
-              <a href="">info@verraki.com</a>
-            </div>
-            <div class="info_col">
-              <a href="">27 Kofo Abayomi Street, Victoria Island, Lagos, Nigeria</a>
-            </div>
-            <div class="info_col">
-              <a href="">+234-(1)-453-7151</a>
-            </div>
-          </div>
-          <div class="social">
-            <a href="https://linkedin.com/" class="fab fa-linkedin-in"></a>
-            <a href="https://facebook.com/" class="fab fa-facebook-f"></a>
-            <a href="https://twitter.com/" class="fab fa-twitter"></a>
-            <a href="https://youtube.com/" class="fab fa-youtube"></a>
-            <a href="https://instagram.com/" class="fab fa-instagram"></a>
+            <a href="https://linkedin.com/company/35563551/"  target="new" class="fab fa-linkedin-in"></a>
+            <a href="https://facebook.com/VerrakiPartners-763370147381957" target="new" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/verrakip" target="new" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/channel/UCdqoCzGhYBpu92G_4IhbQsg" target="new" class="fab fa-youtube"></a>
+            <a href="https://instagram.com/verraki_partners/" target="new" class="fab fa-instagram"></a>
           </div>
         </div>
                    
       </div>
+
     
     <div class="content">
-    <div class="pg_banner" style="background-image: url(media/building.jpeg)">
+    <div class="pg_banner" style="background-image: url(media/building.jpg)">
       <div class="overlay"></div>
     </div>
     
@@ -175,12 +186,12 @@
           
           <div class="news_sort">
             <ul class="clearfix">
-              <li>Our Company</li>
-              <li>Our Value Proposition</li>
-              <li>Our Team</li>
-              <li>Advisors</li>
-              <li>CSR</li>
-              <li>FAQs</li>
+              <li><a href="about.html#company">Our Company</a></li>
+              <li><a href="about.html#value">Value Proposition</a></li>
+              <li><a href="about.html#team">Our Team</a></li>
+              <li><a href="about.html#advisors">Advisors</a></li>
+              <li><a href="about.html#csr">Community Programmes</a></li>
+              <li><a href="about.html#faq">FAQs</a></li>
             </ul>
           </div>
           
@@ -188,8 +199,8 @@
             <div class="sec_cap" id="company">Our Company</div>
             <div class="major_cap">Catalysing High Quality Growth by Improving Productivity of Africa’s Enterprises and Governments.</div>
             <div class="det_text">
+              <p>Verraki is a proudly African company partnering with enterprises and governments to accelerate the development and transformation of Africa by providing business solutions designed for Africa. We build and implement technology solutions for seemingly intractable challenges, provide advisory services to drive the capacity and motivation for change, and curate innovative ventures to unlock new sources of growth across our continent.</p>
               <p>Verraki Partners (Verraki) is a business solutions company for Africa. We believe that business solutions specifically fit for purpose are necessary to solve for Africa and deliver inclusive high-quality growth for the continent’s enterprises and governments.</p>
-              <p>We work with enterprises and governments to ignite opportunities and achieve the seemingly impossible.</p>
               <p>Achieving and sustaining inclusive high-quality growth requires effective and efficient enterprises and governments to deliver impactful solutions that solve for Africa. We work with our clients to define, build and implement fit for purpose, uniquely African solutions with services across Technology, Advisory and Ventures.</p>
             </div>
             
@@ -226,7 +237,7 @@
       
       <div class="section grey_sec">
         <div class="inner-wrap">
-            <div class="sec_cap" id="value">Our Value Proposition</div>
+            <div class="sec_cap"  id="value">Our Value Proposition</div>
             
             <div class="col_inner clearfix">
               <div class="v-wrap">
@@ -264,36 +275,36 @@
             
             <div class="col_inner clearfix">
               <div class="p_hld">
-                <div class="p_photo" style="background-image: url(media/niyi_yusuf.jpeg)"></div>
-                <a href="">
+                <div class="p_photo" style="background-image: url(media/niyi_yusuf.jpg)"></div>
+                <a href="teamdetails/">
                   <span>Olaniyi Yusuf</span>
                   <span>Managing Partner</span>
                 </a>
               </div>
               <div class="p_hld">
                 <div class="p_photo" style="background-image: url(media/toluwaleke.jpg)"></div>
-                <a href="">
+                <a href="teamdetails/">
                   <span>Toluwaleke Adenmosun</span>
                   <span>Partner, Services</span>
                 </a>
               </div>
               <div class="p_hld">
-                <div class="p_photo" style="background-image: url(media/niyi_tayo.jpeg)"></div>
-                <a href="">
+                <div class="p_photo" style="background-image: url(media/niyi_tayo.jpg)"></div>
+                <a href="teamdetails/">
                   <span>Niyi Tayo</span>
                   <span>Partner, Technology</span>
                 </a>
               </div>
               <div class="p_hld">
-                <div class="p_photo" style="background-image: url(media/abayomi.jpeg)"></div>
-                <a href="">
+                <div class="p_photo" style="background-image: url(media/abayomi.jpg)"></div>
+                <a href="teamdetails/">
                   <span>Abayomi Olarinmoye</span>
                   <span>Partner, Real Sector</span>
                 </a>
               </div>
               <div class="p_hld">
-                <div class="p_photo" style="background-image: url(media/kelvin.jpeg)"></div>
-                <a href="">
+                <div class="p_photo" style="background-image: url(media/kelvin.jpg)"></div>
+                <a href="teamdetails/">
                   <span>Kelvin Balogun</span>
                   <span>Partner, Ventures</span>
                 </a>
@@ -306,12 +317,17 @@
       <div class="section grey_sec">
         <div class="inner-wrap">
             
-            <div class="sec_cap" id="csr">Corporate Social Responsibility</div>
+            <div class="sec_cap" id="csr">Community Programmes</div>
             <div class="major_cap">We drive transformational social impact in Africa by tackling headlong, some of the continent’s biggest hurdles.</div>
             <div class="det_text">
               <p>We help build greater opportunities in society by leveraging our understanding of technology and its impact on people to develop inclusive, responsible, and sustainable solutions to complex business and societal challenges.</p>
-              <p>We work with enterprises and governments to ignite opportunities and achieve the seemingly impossible.</p>
-              <p>Achieving and sustaining inclusive high-quality growth requires effective and efficient enterprises and governments to deliver impactful solutions that solve for Africa. We work with our clients to define, build and implement fit for purpose, uniquely African solutions with services across Technology, Advisory and Ventures.</p>
+              <p>Our Community Programmes are focused on:</p>
+              <ul>
+                <li>Education</li>
+                <li>Work Readiness/Employability</li>
+                <li>Entrepreneurship & Skills Development</li>
+                <li>Economic Development and Nation Building</li>
+              </ul>
           </div>
             
         </div>
@@ -403,7 +419,7 @@
             
             <div class="faq_hld">
               <div class="ic">
-                <div class="ic_text">Does this mean Accenture will not look at future/new Nigerian business?</div>
+                <div class="ic_text">What is the relationship between Verraki and Accenture?</div>
                 <div class="ic_sign"><span class="sp-1">+</span><span class="sp-2">-</span></div>
               </div>
               <div class="faq_det">
@@ -435,6 +451,7 @@
       
     
     </div>
+    
     </div>
     
     <div class="footer">
@@ -462,11 +479,11 @@
             <div class="col-links">
               <div class="col-info">2nd Floor, Citibank Building, <br />27 Kofo Abayomi Street, Victoria Island, <br /> Lagos, Nigeria.</div>
               <div class="col-info clearfix">
-                <p><a href="">+234 (1) 453 7151,</a></p>
-                <p><a href="">0901-VERRAKI</a></p>
+                <p><a href="tel: +234-(1)-453-7151">+234 (1) 453 7151,</a></p>
+                <p><a href="tel: 0901-VERRAKI">0901-VERRAKI</a></p>
               </div>
               <div class="col-info">
-                <p><a href="">info@verraki.com</a></p>
+                <p><a href="mailto: info@verraki.com">info@verraki.com</a></p>
               </div>
               
             </div>
@@ -474,11 +491,11 @@
           <div class="col-3">
             <div class="col-hd">Social</div>
             <div class="col-links">
-              <a href="https://linkedin.com/" class="fab fa-linkedin-in"></a>
-              <a href="https://facebook.com/" class="fab fa-facebook-f"></a>
-              <a href="https://twitter.com/" class="fab fa-twitter"></a>
-              <a href="https://youtube.com/" class="fab fa-youtube"></a>
-              <a href="https://instagram.com/" class="fab fa-instagram"></a>
+              <a href="https://linkedin.com/company/35563551/"  target="new" class="fab fa-linkedin-in"></a>
+              <a href="https://facebook.com/VerrakiPartners-763370147381957" target="new" class="fab fa-facebook-f"></a>
+              <a href="https://twitter.com/verrakip" target="new" class="fab fa-twitter"></a>
+              <a href="https://www.youtube.com/channel/UCdqoCzGhYBpu92G_4IhbQsg" target="new" class="fab fa-youtube"></a>
+              <a href="https://instagram.com/verraki_partners/" target="new" class="fab fa-instagram"></a>
             </div>
 <!--            <div class="v_gram">
               <img src="../assets/img/v_orange.png" />
