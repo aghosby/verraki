@@ -6,32 +6,6 @@ $(document).ready(function() {
 		zIndex: 999
 	});
 	
-	$(".avail_pos").each(function () {
-		var l = $(this);
-		l.click(function (e) {
-			e.preventDefault();
-			$('html, body').stop().animate({scrollTop: $("#offset").offset().top-140}, 500)
-			window.location = $(this).attr("data-url");
-			var hashTag = window.location.hash,
-			    newPath = hashTag.replace("#/",""),
-				newArr = newPath.split("/"),
-				pageID = newArr[0],
-				url = newArr[1];
-				
-			if (url) {
-				$.ajax({
-					type: "POST",
-					url: "careers_ajax.php",
-					data: "url=" + url,
-					success: function (data) {
-						$("#content").html(data);
-					}
-				});
-			}
-			return false;
-		});
-	
-	});
 	
 	$(window).scroll(function () {
 		scroll = $(window).scrollTop();
@@ -39,7 +13,7 @@ $(document).ready(function() {
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			d.addClass('smheader');
 		} else {
-			if (scroll >= 60) d.addClass('smheader');
+			if (scroll >= 80) d.addClass('smheader');
 			else d.removeClass('smheader');
 		}
 	});
@@ -48,30 +22,139 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(".menu").fadeToggle(700);
 		$(".menu").toggleClass("open");
-		($(".menu_text").text() === "Close") ? $(".menu_text").text("Menu") : $(".menu_text").text("Close");
-	});   
+	});
+	
+	$('.scroll_click').on("click",function(){
+        $(".menu").fadeToggle(700);
+		$(".menu").toggleClass("open");
+    })
+	
+	
+	
 		
 	$("body").delegate(".ic", "click", function (e) {
 		e.stopPropagation();
 		var c = $(this).parents(".faq_hld"),
 			m = c.find('.faq_det');
-		$(".faq_hld .faq_det").not(m).slideUp();
-		m.slideToggle();
+		$(".faq_hld .faq_det").not(m).slideUp(1000);
+		m.slideToggle(1000);
 		$(this).find(".sp-1").toggleClass('sh');
         $(this).find(".sp-2").toggleClass('sh');
 	});
+	
+	
 	$("body").delegate(".ic", "click", function (e) {
 		e.stopPropagation();
 		var c = $(this).parents(".car_wrap"),
 			m = c.find('.car_det');
-		$(".car_wrap .car_det").not(m).slideUp();
-		m.slideToggle();
+		$(".car_wrap .car_det").not(m).slideUp(1000);
+		m.slideToggle(1000);
 	});
 	
+	
+	$("#all").click(function(e) {
+		e.preventDefault();
+		
+		$(".news_wrap").css("margin","0");
+		
+		$(".news_wrap:nth-child(3n)").css("margin-left","5%");
+		$(".news_wrap:nth-child(3n-1)").css("margin-left","5%");
+		
+		var category = $(this).attr("id");
+		if(category == "all"){
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.news_wrap').removeClass('hide');
+			}, 300);
+			
+		} else {
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.' + category).removeClass('hide');
+			}, 300);
+		
+
+		}
+	});
+	
+	
+	
+	$("#blog").click(function(e) {
+		e.preventDefault();
+
+		var category = $(this).attr("id");
+		if(category == "all"){
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.news_wrap').removeClass('hide');
+			}, 300);
+			
+		} else {
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.' + category).removeClass('hide');
+			}, 300);
+		    $(".news_wrap.hide").css("margin","0");
+		$(".blog").css("margin-right","5%");
+
+		}
+	});
+	
+	
+	$("#media").click(function(e) {
+		e.preventDefault();
+		var category = $(this).attr("id");
+		if(category == "all"){
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.news_wrap').removeClass('hide');
+			}, 300);
+			
+		} else {
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.' + category).removeClass('hide');
+			}, 300);
+		$(".news_wrap.hide").css("margin","0");
+		$(".media").css("margin-right","5%");
+
+		}
+	});
+	
+	
+	$("#insight").click(function(e) {
+		e.preventDefault();
+		
+		var category = $(this).attr("id");
+		if(category == "all"){
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.news_wrap').removeClass('hide');
+			}, 300);
+			
+		} else {
+			$('.news_wrap').addClass('hide');
+			setTimeout(function(){
+				$('.' + category).removeClass('hide');
+			}, 300);
+		$(".news_wrap.hide").css("margin","0");
+		$(".insight").css("margin-right","5%");
+
+		}
+	});
+	
+	
+	
+	var page_url = window.location.href;
+	var page_id = page_url.substring(page_url.lastIndexOf("#") + 1);
+	if ("page_id") {
+		$("html, body").animate({scrollTop: $("#" + page_id).offset().top-130}, 3000);
+	};
+			
 });
 
 function _route() {
-	"use strict";
+    "use strict";
 	var hashTag = window.location.hash;
 	var newPath = hashTag.replace("#/", "");
 	var newArr = newPath.split("/");
