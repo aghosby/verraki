@@ -38,7 +38,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 html {
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow: -moz-scrollbars-vertical;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-text-size-adjust: 100%;
@@ -264,6 +264,15 @@ html {
 	font-size: 15px;
 	color: #fff;
 }
+.news_slide .slide_hd.-js_anime {
+	opacity: 0;
+	transition: opacity 1.5s cubic-bezier(0.4,0,0.2,1) 0.4s, transform 1.5s cubic-bezier(0.4,0,0.2,1) 0.4s;
+	transform: translateX(-20%);
+}
+.news_slide .slide_hd.in-view {
+	opacity: 1;
+	transform: translate(0, 0);
+}
 .flexslider {
 	width: 100%;
 	overflow: hidden;
@@ -332,6 +341,15 @@ html {
     vertical-align: top;
     padding: 0 15px;
 	text-align: center;
+}
+.menu_nav .inner_wrap .nav.-js_anime li {
+	opacity: 0;
+	transform: scale(1.1, 1.1);
+	transition: opacity 1s cubic-bezier(0.4,0,0.2,1) 0.5s, transform 1s cubic-bezier(0.4,0,0.2,1) 0.5s;
+}
+.menu_nav .inner_wrap .nav.in-view li {
+	opacity: 1;
+	transform: scale(1, 1);
 }
 .menu_nav .inner_wrap .nav li a {
 	transition: all 0.5s ease;
@@ -469,8 +487,7 @@ html {
 	position: relative;
 	text-align: center;
 }
-.menu .menu_ft .cont_info_ft .info_col a,
-.menu .menu_ft .cont_info_ft .info_col {
+.menu .menu_ft .cont_info_ft .info_col a {
 	font-family: "PNR";
 	font-size: 14px;
 	color: #5a5b5c;
@@ -730,6 +747,15 @@ html {
 	font-size: 40px;
 	color: #000;
 }
+.section .inner-wrap.-js_anime .pg_title {
+	opacity: 0;
+	transition: opacity 1s cubic-bezier(0.4,0,0.2,1) 0.4s, transform 1s cubic-bezier(0.4,0,0.2,1) 0.4s;
+	transform: translateX(-20%);
+}
+.section .inner-wrap.in-view .pg_title {
+	opacity: 1;
+	transform: translate(0, 0);
+}
 .section .inner-wrap .sec_cap {
 	width: auto;
 	display: inline-block;
@@ -743,12 +769,18 @@ html {
 }
 .section .inner-wrap .sec_cap:before {
 	content: "";
-	width: 50%;
 	height: 1px;
 	background-color: #f58634;
 	position: absolute;
 	bottom: -4px;
 	left: 0;
+}
+.section .inner-wrap .sec_cap.-js_anime:before {
+	width: 0;
+	transition: width 1s cubic-bezier(0.4,0,0.2,1) 0.4s;
+}
+.section .inner-wrap .sec_cap.in-view:before {
+	width: 50%;
 }
 .major_cap {
 	width: 75%;
@@ -785,6 +817,17 @@ html {
 	font-family: "PNAL";
 	font-size: 17px;
 	color: #5a5b5c;
+}
+.det_text.-js_anime p,
+.det_text.-js_anime ul li {
+	opacity: 0;
+	transform: translateY(-15%);
+	transition: opacity 1.5s cubic-bezier(0.4,0,0.2,1) 0.1s, transform 1.5s cubic-bezier(0.4,0,0.2,1) 0.4s;
+}
+.det_text.in-view p,
+.det_text.in-view ul li {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 .det_text p:nth-child(n+2) {
 	margin-top: 15px;
@@ -838,6 +881,17 @@ html {
 	display: inline-block;
 	vertical-align: middle;
 }
+.section .inner-wrap .col_inner.-js_anime .col_photo,
+.section .inner-wrap .col_inner.-js_anime .firm_origin {
+	opacity: 0;
+	transform: scale(1.1, 1.1);
+	transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s, transform 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s;
+}
+.section .inner-wrap .col_inner.in-view .col_photo,
+.section .inner-wrap .col_inner.in-view .firm_origin {
+	opacity: 1;
+	transform: scale(1, 1);
+}
 .section .inner-wrap .col_inner .col_photo img {
 	width: 100%;
 	height: auto;
@@ -888,6 +942,17 @@ html {
 	width: 30%;
 	height: 170px;
 	float: left;
+}
+.section .inner-wrap .col_inner.-js_anime .v-wrap,
+.section .inner-wrap .col_inner.-js_anime .p_hld {
+	opacity: 0;
+	transform: scale(1.1, 1.1);
+	transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s, transform 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s;
+}
+.section .inner-wrap .col_inner.in-view .v-wrap,
+.section .inner-wrap .col_inner.in-view .p_hld {
+	opacity: 1;
+	transform: scale(1, 1);
 }
 .section .inner-wrap .col_inner .v-wrap:nth-child(3n),
 .section .inner-wrap .col_inner .v-wrap:nth-child(3n-1) {
@@ -976,7 +1041,6 @@ html {
 }
 .section .inner-wrap .col_inner .p_hld a span:nth-child(1):before {
 	content: '';
-	width: 20%;
 	height: 1px;
 	position: absolute;
 	left: 0;
@@ -986,6 +1050,13 @@ html {
 }
 .section .inner-wrap .col_inner .p_hld:hover a span:nth-child(1):before {
 	width: 30%;
+}
+.section .inner-wrap .col_inner.-js_anime .p_hld a span:nth-child(1):before {
+	width: 0;
+	transition: width 0.5s cubic-bezier(0.4,0,0.2,1) 1.5s;
+}
+.section .inner-wrap .col_inner.in-view .p_hld a span:nth-child(1):before {
+	width: 20%;
 }
 .section .inner-wrap .faq_wrap_l,
 .section .inner-wrap .faq_wrap_r {
@@ -1001,6 +1072,16 @@ html {
 	height: auto;
 	border: 1px solid #f6f4f2;
 }
+.section .inner-wrap .col_inner.-js_anime .faq_hld {
+	opacity: 0;
+	transform: scale(1.1, 1.1);
+	transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s, transform 0.7s cubic-bezier(0.4,0,0.2,1) 0.5s;
+}
+.section .inner-wrap .col_inner.in-view .faq_hld {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
 .section .inner-wrap .faq_hld:nth-child(n+2) {
 	margin-top: 15px;
 }
