@@ -38,7 +38,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 html {
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow: -moz-scrollbars-vertical;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-text-size-adjust: 100%;
