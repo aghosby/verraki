@@ -487,6 +487,12 @@ html {
 	position: relative;
 	text-align: center;
 }
+.menu .menu_ft .cont_info_ft .info_col {
+	letter-spacing: 0.6px;
+	font-family: "PNR";
+	font-size: 14px;
+	color: #5a5b5c;
+}
 .menu .menu_ft .cont_info_ft .info_col a {
 	font-family: "PNR";
 	font-size: 14px;
