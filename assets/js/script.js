@@ -9,13 +9,8 @@ $(document).ready(function() {
 	
 	$(window).scroll(function () {
 		scroll = $(window).scrollTop();
-		
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			d.addClass('smheader');
-		} else {
 			if (scroll >= 80) d.addClass('smheader');
 			else d.removeClass('smheader');
-		}
 	});
 
     $(".menu_icon").click(function(e){
