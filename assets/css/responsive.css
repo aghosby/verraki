@@ -6,7 +6,6 @@
 #main_wrapper {
 	width: auto;
 	height: 100vh;
-	padding: 1vh 2%;
 	position: relative;
 }
 .section {
@@ -67,7 +66,7 @@
 	transform: translate(5px, 0);
 }
 .banner {
-	height: 98vh;
+	height: 100vh;
 }
 
 /* SLIDER */
@@ -115,7 +114,7 @@
 	border: 1px solid #fff;
 }
 .hm_pg_wrap .menu {
-	height: 98vh;
+	height: 100vh;
 }
 .menu .menu_wrap {
 	width: 90%;
