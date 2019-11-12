@@ -1174,6 +1174,9 @@ html {
 .spi_wrap:nth-child(n+2) {
 	margin-top: 60px;
 }
+.spi_wrap .spi-m {
+        display: none;
+}
 .spi_wrap .spi-d .spi_row .spi_row_inner {
 	display: flex;
 	flex-direction: row;
