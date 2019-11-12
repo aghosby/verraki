@@ -67,6 +67,7 @@
 	transform: translate(5px, 0);
 }
 .banner {
+	height: 97vh;
 	height: height: calc(var(--vh, 1vh)*97);
 }
 
@@ -115,6 +116,7 @@
 	border: 1px solid #fff;
 }
 .hm_pg_wrap .menu {
+	height: 97vh;
 	height: height: calc(var(--vh, 1vh)*97);
 }
 .menu .menu_wrap {
