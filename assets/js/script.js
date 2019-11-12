@@ -6,6 +6,8 @@ $(document).ready(function() {
 		zIndex: 999
 	});
 	
+	var vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', '${vh}px');
 	
 	$(window).scroll(function () {
 		scroll = $(window).scrollTop();
