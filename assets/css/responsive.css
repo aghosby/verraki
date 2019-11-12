@@ -67,7 +67,7 @@
 	transform: translate(5px, 0);
 }
 .banner {
-	height: 100%;
+	height: 97vh;
 }
 
 /* SLIDER */
@@ -115,7 +115,7 @@
 	border: 1px solid #fff;
 }
 .hm_pg_wrap .menu {
-	height: 100%;
+	height: 97vh;
 }
 .menu .menu_wrap {
 	width: 90%;
